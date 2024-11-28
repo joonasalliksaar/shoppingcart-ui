@@ -1,4 +1,7 @@
 <template>
+
+  <div class="title">Colors</div>
+
   <div class="container mt-4">
     <h1 class="text-center mb-4">Shopping Cart</h1>
 
@@ -77,7 +80,7 @@ export default {
             .get(`${this.api}/get-all-products`)
             .then((res) => (this.cartItems = res.data)),
         axios
-            .get(`${this.api}/cart-total-with-tax`)
+            .get(`${this.api}/cart-total`)
             .then((res) => (this.cartTotal = res.data)),
       ]);
     },
@@ -116,4 +119,6 @@ export default {
     this.fetchCart();
   },
 };
+
+
 </script>
